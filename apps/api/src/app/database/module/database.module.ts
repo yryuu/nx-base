@@ -1,8 +1,17 @@
 import { Module } from '@nestjs/common';
-import { databaseProviders } from '../provider/database.providers';
-
+import { TypeOrmModule } from '@nestjs/typeorm';
 @Module({
-  providers: [...databaseProviders],
-  exports: [...databaseProviders],
+  imports: [
+    TypeOrmModule.forRoot({
+      type: 'mysql',
+      host: 'localhost',
+      port: 3306,
+      username: 'root',
+      password: 'rootuser',
+      database: 'dbtest',
+      autoLoadEntities: true,
+      synchronize: true,
+    }),
+  ],
 })
 export class DatabaseModule {}

@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
-import { DatabaseModule } from '../module/database.module';
-import { photoProviders } from '../provider/photo.providers';
-import { PhotoService } from '../service/photo.service';
-
+import { DatabaseModule } from '@nx-base/api-database/module/database.module';
+import { PhotoService } from '@nx-base/api-database/service/photo.service';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { Photo } from '@nx-base/api-database/entity/photo/photo.entity';
 @Module({
-  imports: [DatabaseModule],
-  providers: [...photoProviders, PhotoService],
+  imports: [DatabaseModule, TypeOrmModule.forFeature([Photo])],
+  providers: [PhotoService],
 })
 export class PhotoModule {}

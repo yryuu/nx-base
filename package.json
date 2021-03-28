@@ -29,7 +29,12 @@
     "dev:ssr": "ng run client:serve-ssr",
     "serve:ssr": "node dist/client/server/main.js",
     "build:ssr": "ng build --prod && ng run client:server:production",
-    "prerender": "ng run client:prerender"
+    "prerender": "ng run client:prerender",
+    "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
+    "migration:generate": "npm run typeorm migration:generate -- --name",
+    "migration:create": "npm run typeorm migration:create -- --name",
+    "migration:run": "npm run typeorm migration:run",
+    "migration:revert": "npm run typeorm migration:revert"
   },
   "private": true,
   "dependencies": {
@@ -48,9 +53,11 @@
     "@nguniversal/express-engine": "^11.2.1",
     "@nrwl/angular": "11.5.2",
     "express": "^4.15.2",
+    "mysql": "^2.18.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~6.6.3",
     "tslib": "^2.0.0",
+    "typeorm": "^0.2.31",
     "zone.js": "^0.10.2"
   },
   "devDependencies": {

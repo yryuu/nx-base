@@ -155,9 +155,7 @@
           "options": {
             "browserTarget": "client:build:production",
             "serverTarget": "client:server:production",
-            "routes": [
-              "/"
-            ]
+            "routes": ["/"]
           },
           "configurations": {
             "production": {}
@@ -251,6 +249,57 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/api-interfaces/**/*.ts"]
+          }
+        }
+      }
+    },
+    "ws": {
+      "root": "apps/ws",
+      "sourceRoot": "apps/ws/src",
+      "projectType": "application",
+      "prefix": "ws",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/ws",
+            "main": "apps/ws/src/main.ts",
+            "tsConfig": "apps/ws/tsconfig.app.json",
+            "assets": ["apps/ws/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/ws/src/environments/environment.ts",
+                  "with": "apps/ws/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "ws:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/ws/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/ws"],
+          "options": {
+            "jestConfig": "apps/ws/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

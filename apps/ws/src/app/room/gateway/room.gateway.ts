@@ -261,6 +261,7 @@ export class RoomGateway implements OnGatewayInit, OnGatewayDisconnect {
   }
 
   /**
+   * TODO
    * Amazon Kinesis Video StreamのTokenを返す
    * TODO DBから取得する
    */

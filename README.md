@@ -1,10 +1,21 @@
 # NxBase
 
-Nrlw を用いた  
-api:nestjs  
-clinet:angular
-application(ストアにアップロードできる):angular+cordova
+Nrwl を用いた  
+backend:nestjs  
+clinet:angular  
+application(ハイブリットアプリ):angular+cordova
+
 の基盤プロジェクト
+
+# init setup
+
+Node Js 14:15.1 動作済み
+
+初回セットアップ
+
+```
+npm install
+```
 
 # Command
 
@@ -46,5 +57,5 @@ android
 
 ```
 npm run build cordova
-cordova build android
+npx cordova build android
 ```

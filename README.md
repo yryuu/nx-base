@@ -45,7 +45,7 @@ client
 npm run start client
 ```
 
-server
+application
 
 ```
 npm run start cordova

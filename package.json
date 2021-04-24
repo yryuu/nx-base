@@ -34,7 +34,10 @@
     "migration:generate": "npm run typeorm migration:generate -- --name",
     "migration:create": "npm run typeorm migration:create -- --name",
     "migration:run": "npm run typeorm migration:run",
-    "migration:revert": "npm run typeorm migration:revert"
+    "migration:revert": "npm run typeorm migration:revert",
+    "@ws-build-comment": "wsビルド用コマンド",
+    "ws.build.prod": "npx nx build --prod ws",
+    "ws.start.prod": "node dist/apps/ws/main"
   },
   "private": true,
   "dependencies": {
@@ -49,14 +52,19 @@
     "@angular/router": "^11.2.0",
     "@nestjs/common": "^7.0.0",
     "@nestjs/core": "^7.0.0",
+    "@nestjs/microservices": "^7.6.15",
     "@nestjs/platform-express": "^7.0.0",
+    "@nestjs/platform-socket.io": "^7.6.15",
     "@nestjs/typeorm": "^7.1.5",
+    "@nestjs/websockets": "^7.6.15",
     "@nguniversal/express-engine": "^11.2.1",
     "@nrwl/angular": "11.5.2",
+    "@types/socket.io": "^2.1.13",
     "express": "^4.15.2",
     "mysql": "^2.18.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~6.6.3",
+    "socket.io-redis": "^5.2.0",
     "tslib": "^2.0.0",
     "typeorm": "^0.2.31",
     "zone.js": "^0.10.2"

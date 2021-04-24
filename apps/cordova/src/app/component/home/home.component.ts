@@ -1,0 +1,16 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'nx-base-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
+})
+export class HomeComponent implements OnInit {
+  constructor() {
+    console.log('constructor');
+  }
+
+  ngOnInit() {
+    console.log('mypage');
+  }
+}

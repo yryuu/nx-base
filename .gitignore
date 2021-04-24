@@ -6,6 +6,10 @@
 /out-tsc
 /www
 
+# cordova ignore
+/plugins/
+/platforms/
+
 # dependencies
 /node_modules
 

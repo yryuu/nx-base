@@ -18,8 +18,7 @@
   "projects": {
     "client": { "tags": [] },
     "client-e2e": { "tags": [], "implicitDependencies": ["client"] },
-    "api": { "tags": [] },
-    "api-interfaces": { "tags": [] },
+    "backend": { "tags": [] },
     "ws": { "tags": [] },
     "cordova": { "tags": [] },
     "cordova-e2e": { "tags": [], "implicitDependencies": ["cordova"] }

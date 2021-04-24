@@ -1,0 +1,30 @@
+<div class="page-container">
+  <header>
+    <div>
+      <button mat-button class="menu-button" (click)="sidenav.toggle()">
+        <mat-icon>{{ isMenuOpen ? 'menu_open' : 'menu' }}</mat-icon>
+      </button>
+
+      <a routerLink="/">
+        <span class="app-title">投資家たちのコミュニティ</span>
+      </a>
+    </div>
+  </header>
+
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav
+      #sidenav
+      autoFocus="false"
+      mode="over"
+      [(opened)]="isMenuOpen"
+      class="sidenav"
+      (click)="isMenuOpen = false"
+    >
+      <a mat-button routerLink="/page1">Page 1</a>
+      <a mat-button routerLink="/page2">Page 2</a>
+      <a mat-button routerLink="/page3">Page 3</a>
+      <a mat-button routerLink="/page4">Page 4</a>
+      <a mat-button routerLink="/page5">Page 5</a>
+    </mat-sidenav>
+  </mat-sidenav-container>
+</div>

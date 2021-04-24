@@ -16,7 +16,8 @@
         ],
         "@angular-eslint/component-selector": [
           "error",
-          { "type": "element", "prefix": "nx-base", "style": "kebab-case" }
+          { "type": "element", "prefix": "nx-base", "style": "kebab-case" },
+          { "type": "element", "prefix": "app", "style": "kebab-case" }
         ]
       }
     },

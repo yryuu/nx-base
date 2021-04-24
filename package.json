@@ -42,10 +42,12 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^11.2.0",
+    "@angular/cdk": "^11.2.10",
     "@angular/common": "^11.2.0",
     "@angular/compiler": "^11.2.0",
     "@angular/core": "^11.2.0",
     "@angular/forms": "^11.2.0",
+    "@angular/material": "^11.2.10",
     "@angular/platform-browser": "^11.2.0",
     "@angular/platform-browser-dynamic": "^11.2.0",
     "@angular/platform-server": "^11.2.0",
@@ -62,6 +64,7 @@
     "@types/socket.io": "^2.1.13",
     "cordova": "^10.0.0",
     "express": "^4.15.2",
+    "md5": "^2.3.0",
     "mysql": "^2.18.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~6.6.3",
@@ -95,6 +98,7 @@
     "@types/node": "14.14.33",
     "@typescript-eslint/eslint-plugin": "4.3.0",
     "@typescript-eslint/parser": "4.3.0",
+    "cordova-android": "^9.1.0",
     "cypress": "^6.0.1",
     "dotenv": "8.2.0",
     "eslint": "7.10.0",
@@ -106,5 +110,10 @@
     "ts-jest": "26.4.0",
     "ts-node": "~9.1.1",
     "typescript": "~4.0.3"
+  },
+  "cordova": {
+    "platforms": [
+      "android"
+    ]
   }
 }

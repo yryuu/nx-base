@@ -16,7 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "@nx-base/api-interfaces": ["libs/api-interfaces/src/index.ts"],
-      "@nx-base/api-database/*": ["apps/api/src/app/database/*"],
+      "@nx-base/backend-api-controller/*": [
+        "apps/backend/src/app/controller/api/*"
+      ],
+      "@nx-base/backend-database/*": ["apps/backend/src/app/database/*"],
       "@nx-base/core/domain/constant": [
         "libs/core/domain/constant/src/index.ts"
       ],

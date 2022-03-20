@@ -7,6 +7,4 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  hello$ = this.http.get<unknown>('http://localhost:3333/api/hello');
-  constructor(private http: HttpClient) {}
 }
